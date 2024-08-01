@@ -1,4 +1,7 @@
 import org.junit.Test;
+
+import com.example.Show;
+
 import static org.junit.Assert.*;
 
 public class ShowTest {
