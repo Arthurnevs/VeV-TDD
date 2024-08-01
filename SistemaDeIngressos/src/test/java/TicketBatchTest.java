@@ -1,8 +1,7 @@
-package com.example;
-
 import org.junit.Test;
 
 import com.example.Ticket;
+import com.example.TicketBatch;
 import com.example.TicketType;
 
 import java.util.List;
