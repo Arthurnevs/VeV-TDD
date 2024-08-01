@@ -49,6 +49,14 @@ public class Show {
         int vipTicketsSold = 0;
         int halfTicketsSold = 0;
         double revenue = 0.0;
+        double expenses = fee;
+
+        if (specialDate) {
+            expenses += infrastructureCost + (infrastructureCost * 0.15);
+        } else {
+            expenses += infrastructureCost;
+        }
+
 
         for (TicketBatch batch : ticketBatches) {
             for (Ticket ticket : batch.getTickets()) {
@@ -68,12 +76,14 @@ public class Show {
                             halfTicketsSold++;
                             break;
                     }
-                    revenue += price * (1 - batch.getDiscount());
+                    revenue += price - (price * batch.getDiscount());
                 }
             }
         }
 
-        double netRevenue = revenue - fee - infrastructureCost * (specialDate ? 1.15 : 1.0);
+        System.out.println(revenue);
+
+        double netRevenue = revenue - expenses;
         String financialStatus;
         if (netRevenue > 0) {
             financialStatus = "LUCRO";
