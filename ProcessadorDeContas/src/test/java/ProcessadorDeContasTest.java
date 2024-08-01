@@ -1,5 +1,6 @@
 
 
+import org.br.com.ufcg.Models.Conta;
 import org.br.com.ufcg.Models.Fatura;
 import org.junit.Test;
 
@@ -14,5 +15,6 @@ public class ProcessadorDeContasTest {
         String dataString = "29/07/2024";
         LocalDate data = LocalDate.parse(dataString, formatter);
         Fatura fatura = new Fatura(data,666.69,"Laryssa");
+        Conta conta = new Conta(data, 700, "12345");
     }
 }
