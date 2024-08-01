@@ -1,6 +1,7 @@
 import org.junit.Test;
 
 import com.example.Show;
+import com.example.ShowReport;
 import com.example.Ticket;
 import com.example.TicketBatch;
 import com.example.TicketType;
