@@ -3,16 +3,19 @@ package org.br.com.ufcg.Models;
 import java.time.LocalDate;
 
 public class Pagamento {
-    private LocalDate data;
     private double valor;
     private String tipoPagamento;
 
-    public double getValor(){
-        return valor;
+    private String idFatura;
+
+    public Pagamento(double valor, String tipoPagamento, String idFatura){
+        this.valor = valor;
+        this.tipoPagamento = tipoPagamento;
+        this.idFatura = idFatura;
     }
 
-    public LocalDate getData(){
-        return data;
+    public double getValor(){
+        return valor;
     }
 
     public String getTipoPagamento(){
