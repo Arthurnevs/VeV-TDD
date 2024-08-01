@@ -1,4 +1,8 @@
 import org.junit.Test;
+
+import com.example.Ticket;
+import com.example.TicketType;
+
 import static org.junit.Assert.*;
 
 public class TicketTest {
